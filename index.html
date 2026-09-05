@@ -6,12 +6,18 @@
   <meta name="theme-color" content="#111114">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- INFLORÉ INVITE VERSION 2 -->
   <title>INFLORÉ ’27 | Personal Invite</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
-    html { -webkit-text-size-adjust: 100%; }
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
 
     body {
       margin: 0;
@@ -27,7 +33,9 @@
       width: 100%;
       max-width: 460px;
       margin: 0 auto;
-      padding: max(22px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom));
+      padding: max(22px, env(safe-area-inset-top))
+               16px
+               max(28px, env(safe-area-inset-bottom));
     }
 
     .card {
@@ -78,7 +86,7 @@
       background: #101013;
       color: #fff;
       font: inherit;
-      font-size: 16px; /* prevents iOS Safari zoom */
+      font-size: 16px;
       -webkit-appearance: none;
       appearance: none;
     }
@@ -122,7 +130,8 @@
       appearance: checkbox;
     }
 
-    button, .link {
+    button,
+    .link {
       display: flex;
       width: 100%;
       min-height: 50px;
@@ -192,76 +201,164 @@
 </head>
 
 <body>
+
   <main class="page">
+
     <section class="card">
-      <div class="brand">Rajagiri Centre for Business Studies</div>
 
-      <h1>INFLORÉ ’27</h1>
-      <p class="tagline">A personal invitation.</p>
-
-      <label for="name">Name</label>
-      <input id="name" type="text" placeholder="e.g. Rahul"
-             autocomplete="name" autocapitalize="words">
-
-      <label for="number">WhatsApp number</label>
-      <div class="phone">
-        <input id="country" class="country" type="tel" value="+91"
-               inputmode="tel" aria-label="Country code">
-        <input id="number" class="number" type="tel" placeholder="9876543210"
-               inputmode="numeric" autocomplete="tel">
+      <div class="brand">
+        Rajagiri Centre for Business Studies
       </div>
 
-      <label for="college">College</label>
-      <input id="college" type="text" placeholder="e.g. ABC College"
-             autocomplete="organization" autocapitalize="words">
+      <h1>INFLORÉ ’27</h1>
 
-      <label class="consent">
-        <input id="consent" type="checkbox">
-        <span>I agree to receive Infloré ’27 invitations and updates on WhatsApp.</span>
+      <p class="tagline">
+        A personal invitation.
+      </p>
+
+      <label for="name">
+        Name
       </label>
 
-      <button id="send" type="button" disabled>
+      <input
+        id="name"
+        type="text"
+        placeholder="e.g. Rahul"
+        autocomplete="name"
+        autocapitalize="words"
+      >
+
+      <label for="number">
+        WhatsApp number
+      </label>
+
+      <div class="phone">
+
+        <input
+          id="country"
+          class="country"
+          type="tel"
+          value="+91"
+          inputmode="tel"
+          aria-label="Country code"
+        >
+
+        <input
+          id="number"
+          class="number"
+          type="tel"
+          placeholder="9876543210"
+          inputmode="numeric"
+          autocomplete="tel"
+        >
+
+      </div>
+
+      <label for="college">
+        College
+      </label>
+
+      <input
+        id="college"
+        type="text"
+        placeholder="e.g. ABC College"
+        autocomplete="organization"
+        autocapitalize="words"
+      >
+
+      <label class="consent">
+
+        <input
+          id="consent"
+          type="checkbox"
+        >
+
+        <span>
+          I agree to receive Infloré ’27 invitations and updates on WhatsApp.
+        </span>
+
+      </label>
+
+      <button
+        id="send"
+        type="button"
+        disabled
+      >
         SEND PERSONALIZED INVITE
       </button>
 
-      <a class="link" href="https://inflore.rajagiri.edu/" target="_blank" rel="noopener">
+      <a
+        class="link"
+        href="https://inflore.rajagiri.edu/"
+        target="_blank"
+        rel="noopener"
+      >
         OPEN INFLORÉ WEBSITE
       </a>
 
-      <a class="link" href="https://www.instagram.com/inflore.27/" target="_blank" rel="noopener">
+      <a
+        class="link"
+        href="https://www.instagram.com/inflore.27/"
+        target="_blank"
+        rel="noopener"
+      >
         FOLLOW @INFLORÉ.27
       </a>
 
       <div class="preview">
-        <div class="preview-title">Message preview</div>
+
+        <div class="preview-title">
+          Message preview
+        </div>
+
         <p id="preview"></p>
+
       </div>
 
       <div class="note">
-        This version is designed to run as a normal HTTPS webpage on GitHub Pages.
-        Database connection can be added later.
+        INFLORÉ ’27 • Personal Invite • Version 2
       </div>
+
     </section>
+
   </main>
 
-  <script>
-    (function () {
-      const nameInput = document.getElementById("name");
-      const countryInput = document.getElementById("country");
-      const numberInput = document.getElementById("number");
-      const collegeInput = document.getElementById("college");
-      const consentInput = document.getElementById("consent");
-      const sendButton = document.getElementById("send");
-      const preview = document.getElementById("preview");
 
-      /* =========================================================
-         EASY MESSAGE EDIT AREA
-         Change the text below whenever you want to change
-         the WhatsApp invitation.
-         ========================================================= */
+  <script>
+
+    (function () {
+
+      const nameInput =
+        document.getElementById("name");
+
+      const countryInput =
+        document.getElementById("country");
+
+      const numberInput =
+        document.getElementById("number");
+
+      const collegeInput =
+        document.getElementById("college");
+
+      const consentInput =
+        document.getElementById("consent");
+
+      const sendButton =
+        document.getElementById("send");
+
+      const preview =
+        document.getElementById("preview");
+
+
+      /* ============================================
+         WHATSAPP MESSAGE
+         EDIT THIS SECTION LATER
+         ============================================ */
 
       function createMessage() {
-        const name = nameInput.value.trim() || "there";
+
+        const name =
+          nameInput.value.trim() || "there";
 
         return `Hey ${name}! 👋
 
@@ -269,50 +366,108 @@ You’ve been personally invited to INFLORÉ ’27 by Rajagiri Centre for Busine
 
 We’re bringing fresh challenges, competitions and experiences this year. Would love to have you and your team join us!
 
-Discover more: https://inflore.rajagiri.edu/
-Instagram: @inflore.27`;
+Discover more:
+https://inflore.rajagiri.edu/
+
+Instagram:
+@inflore.27`;
+
       }
+
 
       function updatePage() {
-        preview.textContent = createMessage();
 
-        const validName = nameInput.value.trim().length > 0;
-        const validNumber = numberInput.value.replace(/\D/g, "").length >= 7;
-        const validCollege = collegeInput.value.trim().length > 0;
-        const consentGiven = consentInput.checked;
+        preview.textContent =
+          createMessage();
 
-        sendButton.disabled = !(validName && validNumber && validCollege && consentGiven);
+        const validName =
+          nameInput.value.trim().length > 0;
+
+        const validNumber =
+          numberInput.value
+            .replace(/\D/g, "")
+            .length >= 7;
+
+        const validCollege =
+          collegeInput.value.trim().length > 0;
+
+        const consentGiven =
+          consentInput.checked;
+
+        sendButton.disabled =
+          !(validName &&
+            validNumber &&
+            validCollege &&
+            consentGiven);
+
       }
 
-      [nameInput, countryInput, numberInput, collegeInput].forEach(function (element) {
-        element.addEventListener("input", updatePage);
+
+      [
+        nameInput,
+        countryInput,
+        numberInput,
+        collegeInput
+      ].forEach(function (element) {
+
+        element.addEventListener(
+          "input",
+          updatePage
+        );
+
       });
 
-      consentInput.addEventListener("change", updatePage);
 
-      sendButton.addEventListener("click", function () {
-        const country = countryInput.value.replace(/\D/g, "") || "91";
-        const number = numberInput.value.replace(/\D/g, "");
+      consentInput.addEventListener(
+        "change",
+        updatePage
+      );
 
-        if (number.length < 7) return;
 
-        const fullNumber = country + number;
-        const whatsappURL =
-          "https://wa.me/" +
-          fullNumber +
-          "?text=" +
-          encodeURIComponent(createMessage());
+      sendButton.addEventListener(
+        "click",
+        function () {
 
-        /*
-          location.href is intentionally used instead of window.open().
-          This is more reliable on iPhone Safari because the navigation
-          happens directly from the user's tap.
-        */
-        window.location.href = whatsappURL;
-      });
+          const country =
+            countryInput.value
+              .replace(/\D/g, "") || "91";
+
+          const number =
+            numberInput.value
+              .replace(/\D/g, "");
+
+          if (number.length < 7) {
+            return;
+          }
+
+          const fullNumber =
+            country + number;
+
+          const whatsappURL =
+            "https://wa.me/" +
+            fullNumber +
+            "?text=" +
+            encodeURIComponent(
+              createMessage()
+            );
+
+          /*
+            Using location.href makes the WhatsApp
+            redirect more reliable on iPhone Safari.
+          */
+
+          window.location.href =
+            whatsappURL;
+
+        }
+      );
+
 
       updatePage();
+
     })();
+
   </script>
+
 </body>
 </html>
